@@ -1,0 +1,266 @@
+{
+  "provenance": {
+    "source": "大修论文：Fig1/3/4、TableII/V/VI、p11、AppendixB",
+    "caveats": [
+      "按 Fig4 延伸使用 formation_order=[1,2,3,4,5,6]；其他车辆对的几何规则未完整给出",
+      "epsilon=0.001 来自 AppendixB；正文小案例未单独重申",
+      "不是原仓库缺失的 car.txt/DAG*.txt 历史输入"
+    ]
+  },
+  "vehicles": [
+    {
+      "id": 1,
+      "frequency": 2.5,
+      "fault_rate": 0.0276
+    },
+    {
+      "id": 2,
+      "frequency": 3,
+      "fault_rate": 0.0238
+    },
+    {
+      "id": 3,
+      "frequency": 3.5,
+      "fault_rate": 0.0273
+    },
+    {
+      "id": 4,
+      "frequency": 2,
+      "fault_rate": 0.0239
+    },
+    {
+      "id": 5,
+      "frequency": 2.8,
+      "fault_rate": 0.0274
+    },
+    {
+      "id": 6,
+      "frequency": 3,
+      "fault_rate": 0.0282
+    }
+  ],
+  "formation_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "links": [
+    {
+      "u": 1,
+      "v": 2,
+      "distance": 120
+    },
+    {
+      "u": 1,
+      "v": 3,
+      "distance": 180
+    },
+    {
+      "u": 2,
+      "v": 3,
+      "distance": 80
+    },
+    {
+      "u": 2,
+      "v": 4,
+      "distance": 170
+    },
+    {
+      "u": 3,
+      "v": 4,
+      "distance": 100
+    },
+    {
+      "u": 3,
+      "v": 5,
+      "distance": 150
+    },
+    {
+      "u": 4,
+      "v": 5,
+      "distance": 70
+    },
+    {
+      "u": 4,
+      "v": 6,
+      "distance": 190
+    },
+    {
+      "u": 5,
+      "v": 6,
+      "distance": 150
+    }
+  ],
+  "radio": {
+    "bandwidth": 10,
+    "power": 0.1,
+    "theta": 17.8,
+    "noise": 1e-13
+  },
+  "epsilon": 0.001,
+  "communication_fault_rate": 0.025,
+  "dags": [
+    {
+      "id": "G1_1",
+      "source": 1,
+      "arrival": 0.0,
+      "requirement": 0.99,
+      "tasks": [
+        {
+          "id": 1,
+          "input": 0.792,
+          "workload": 0.242,
+          "output": 0.301,
+          "predecessors": []
+        },
+        {
+          "id": 2,
+          "input": 0.518,
+          "workload": 0.246,
+          "output": 0.548,
+          "predecessors": [
+            1
+          ]
+        },
+        {
+          "id": 3,
+          "input": 0.612,
+          "workload": 0.42,
+          "output": 0.418,
+          "predecessors": [
+            1
+          ]
+        },
+        {
+          "id": 4,
+          "input": 0.899,
+          "workload": 0.223,
+          "output": 0.617,
+          "predecessors": [
+            1
+          ]
+        },
+        {
+          "id": 5,
+          "input": 0.557,
+          "workload": 0.368,
+          "output": 0.42,
+          "predecessors": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G3_1",
+      "source": 3,
+      "arrival": 0.0,
+      "requirement": 0.99,
+      "tasks": [
+        {
+          "id": 6,
+          "input": 0.586,
+          "workload": 0.344,
+          "output": 0.738,
+          "predecessors": []
+        },
+        {
+          "id": 7,
+          "input": 0.231,
+          "workload": 0.425,
+          "output": 0.238,
+          "predecessors": [
+            6
+          ]
+        },
+        {
+          "id": 8,
+          "input": 0.607,
+          "workload": 0.288,
+          "output": 0.396,
+          "predecessors": [
+            6
+          ]
+        },
+        {
+          "id": 9,
+          "input": 0.636,
+          "workload": 0.442,
+          "output": 0.146,
+          "predecessors": [
+            7
+          ]
+        },
+        {
+          "id": 10,
+          "input": 0.185,
+          "workload": 0.385,
+          "output": 0.593,
+          "predecessors": [
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G5_1",
+      "source": 5,
+      "arrival": 0.0,
+      "requirement": 0.99,
+      "tasks": [
+        {
+          "id": 11,
+          "input": 0.387,
+          "workload": 0.232,
+          "output": 0.558,
+          "predecessors": []
+        },
+        {
+          "id": 12,
+          "input": 0.753,
+          "workload": 0.256,
+          "output": 0.743,
+          "predecessors": [
+            11
+          ]
+        },
+        {
+          "id": 13,
+          "input": 0.876,
+          "workload": 0.42,
+          "output": 0.312,
+          "predecessors": [
+            11
+          ]
+        },
+        {
+          "id": 14,
+          "input": 0.701,
+          "workload": 0.253,
+          "output": 0.318,
+          "predecessors": [
+            11,
+            12
+          ]
+        },
+        {
+          "id": 15,
+          "input": 0.234,
+          "workload": 0.378,
+          "output": 0.582,
+          "predecessors": [
+            13,
+            14
+          ]
+        }
+      ]
+    }
+  ]
+}

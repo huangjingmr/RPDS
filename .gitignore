@@ -1,0 +1,23 @@
+# Python cache and build output
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+
+# Local environments and editor files
+.venv/
+.vscode/
+.idea/
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+
+# Local backups and complete experiment records
+backups/
+original/
+reports/
