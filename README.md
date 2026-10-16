@@ -2,7 +2,6 @@
 
 本仓库是论文 **Reliability-Aware Collaborative Computing for Multi-DAG Task Offloading in Vehicular Fleets** 的 Python 实现，包含 RPDS 调度器、对比算法、论文实验、消融实验和调度正确性检查。
 
-> 建议 GitHub 仓库名使用 `RPDS`。`TNSE` 是期刊名称，不能直接说明项目内容，也不方便以后管理其他 TNSE 投稿。
 
 ## 先从哪里看
 
